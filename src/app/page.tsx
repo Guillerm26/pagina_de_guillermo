@@ -1,12 +1,11 @@
-// TODO: reemplazar estos datos y enlaces con los reales de Guillermo.
 const PERFIL = {
   nombre: "Guillermo Cardozo Cruz",
   rol: "Periodista deportivo y comentarista",
   enfoque: "Fútbol desde el lado positivo",
   email: "guillermocardosocruz2000@gmail.com",
   whatsapp: "573185158367",
-  instagram: "https://www.instagram.com/",
-  youtube: "https://www.youtube.com/",
+  instagram: "https://www.instagram.com/guillercardoso/",
+  youtube: "https://www.youtube.com/@guillercardoso",
 };
 
 const WA_LINK = `https://wa.me/${PERFIL.whatsapp}?text=${encodeURIComponent(
@@ -33,19 +32,22 @@ const PILARES = [
 
 const TRABAJOS = [
   {
-    titulo: "[Título del video o artículo]",
+    titulo: "James vs. Teófilo",
     formato: "Video",
-    desc: "Breve descripción de la pieza y por qué destaca.",
+    desc: "Previa de un partido importante: analizo el nivel de James Rodríguez y Teófilo Gutiérrez, dos grandes cracks del fútbol colombiano.",
+    enlace: "https://youtu.be/hlPWjvKL_8I",
   },
   {
-    titulo: "[Título del video o artículo]",
-    formato: "Columna",
-    desc: "Breve descripción de la pieza y por qué destaca.",
+    titulo: "Por qué Argentina perdió la final del Mundial 2026 (análisis completo)",
+    formato: "Video",
+    desc: "España venció 1-0 a Argentina con gol de Ferran Torres en el alargue. Analizo la jugada clave, la expulsión que cambió el partido y si se cierra el ciclo de Messi y Scaloni.",
+    enlace: "https://youtu.be/0IJ8SjF4NE8",
   },
   {
-    titulo: "[Título del video o artículo]",
-    formato: "Reel / clip",
-    desc: "Breve descripción de la pieza y por qué destaca.",
+    titulo: "Fecha 12 · Liga BetPlay Dimayor",
+    formato: "Video",
+    desc: "Repaso de los resultados de la fecha (Nacional 1-1 Millonarios, Junior 2-0 Medellín, entre otros), cómo quedó la tabla y mi predicción para la fecha 13.",
+    enlace: "https://youtu.be/JfEUVrJP4LQ",
   },
 ];
 
@@ -141,7 +143,13 @@ export default function Home() {
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
           {TRABAJOS.map((t, i) => (
-            <div key={i} className="border border-ink/10">
+            <a
+              key={i}
+              href={t.enlace}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border border-ink/10 transition-opacity hover:opacity-90"
+            >
               <div className="flex aspect-video items-center justify-center bg-cream">
                 <span className="text-xs text-ink/40">[MINIATURA]</span>
               </div>
@@ -152,7 +160,7 @@ export default function Home() {
                 <h3 className="mb-2 text-base font-bold">{t.titulo}</h3>
                 <p className="text-sm leading-relaxed text-ink/70">{t.desc}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -170,9 +178,10 @@ export default function Home() {
             Contar el fútbol desde lo que suma
           </h2>
           <p className="max-w-lg leading-relaxed text-white/80">
-            [Aquí va tu historia: cómo empezaste en el periodismo deportivo, qué te
-            formó, en qué medios o proyectos has trabajado y por qué te interesa
-            mostrar el lado positivo del fútbol.]
+            El fútbol une a las personas. Hoy hay mucho odio, tanto en el fútbol como
+            en la vida, y yo prefiero hablar de lo bueno: cómo este deporte cambia
+            vidas, da empleo, genera alegrías y une a la sociedad. Ese es el lugar
+            desde el que hago periodismo y comento fútbol.
           </p>
         </div>
       </section>
