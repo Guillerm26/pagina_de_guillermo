@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const PERFIL = {
   nombre: "Guillermo Cardozo Cruz",
   rol: "Periodista deportivo y comentarista",
@@ -167,8 +169,14 @@ export default function Home() {
 
       {/* SOBRE MÍ */}
       <section id="sobre-mi" className="grid gap-12 bg-ink px-6 py-24 text-white sm:px-12 lg:grid-cols-2 lg:items-center">
-        <div className="flex aspect-[4/3] items-center justify-center border border-white/15 bg-white/5">
-          <span className="text-sm text-white/40">[FOTO DE GUILLERMO]</span>
+        <div className="relative aspect-[4/3] overflow-hidden border border-white/15">
+          <Image
+            src="/guillermo.jpg"
+            alt="Guillermo Cardozo Cruz"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[3px] text-lime">
