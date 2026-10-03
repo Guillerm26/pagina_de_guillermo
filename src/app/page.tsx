@@ -38,18 +38,21 @@ const TRABAJOS = [
     formato: "Video",
     desc: "Previa de un partido importante: analizo el nivel de James Rodríguez y Teófilo Gutiérrez, dos grandes cracks del fútbol colombiano.",
     enlace: "https://youtu.be/hlPWjvKL_8I",
+     miniatura: "https://img.youtube.com/vi/hlPWjvKL_8I/hqdefault.jpg",
   },
   {
     titulo: "Por qué Argentina perdió la final del Mundial 2026 (análisis completo)",
     formato: "Video",
     desc: "España venció 1-0 a Argentina con gol de Ferran Torres en el alargue. Analizo la jugada clave, la expulsión que cambió el partido y si se cierra el ciclo de Messi y Scaloni.",
     enlace: "https://youtu.be/0IJ8SjF4NE8",
+      miniatura: "https://img.youtube.com/vi/0IJ8SjF4NE8/hqdefault.jpg",
   },
   {
     titulo: "Fecha 12 · Liga BetPlay Dimayor",
     formato: "Video",
     desc: "Repaso de los resultados de la fecha (Nacional 1-1 Millonarios, Junior 2-0 Medellín, entre otros), cómo quedó la tabla y mi predicción para la fecha 13.",
     enlace: "https://youtu.be/JfEUVrJP4LQ",
+    miniatura: "https://img.youtube.com/vi/JfEUVrJP4LQ/hqdefault.jpg",
   },
 ];
 
@@ -152,9 +155,11 @@ export default function Home() {
               rel="noopener noreferrer"
               className="block border border-ink/10 transition-opacity hover:opacity-90"
             >
-              <div className="flex aspect-video items-center justify-center bg-cream">
-                <span className="text-xs text-ink/40">[MINIATURA]</span>
-              </div>
+             <img
+  src={t.miniatura}
+  alt={t.titulo}
+  className="aspect-video w-full object-cover"
+/>
               <div className="p-6">
                 <div className="mb-2 text-xs font-bold uppercase tracking-wide text-green">
                   {t.formato}

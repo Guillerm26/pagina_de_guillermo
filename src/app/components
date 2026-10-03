@@ -1,0 +1,23 @@
+code .const videos = [
+  { id: "hlPWjvKL_8I", titulo: "James vs Teófilo tonight" },
+  { id: "0IJ8SjF4NE8", titulo: "Por qué Argentina perdió la final del Mundial 2026" },
+  { id: "JfEUVrJP4LQ", titulo: "Análisis de la Fecha 12 de la Liga Betplay" },
+];
+
+export default function Trabajos() {
+  return (
+    <section>
+      <h2>Trabajos</h2>
+      {videos.map((v) => (
+        <a key={v.id} href={`https://youtu.be/${v.id}`} target="_blank">
+          <img
+            src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
+            alt={v.titulo}
+            style={{ width: "100%", maxWidth: 400 }}
+          />
+          <p>{v.titulo}</p>
+        </a>
+      ))}
+    </section>
+  );
+}
